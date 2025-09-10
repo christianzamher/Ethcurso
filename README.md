@@ -1,14 +1,14 @@
 # 👋 Bienvenido/a
 
-Mi nombre es **Christian Zamora** y este es el inicio de mi portafolio en GitHub.  
-Actualmente me encuentro en proceso de formación como desarrollador/a dentro del ecosistema **Ethereum**, dando mis primeros pasos en la construcción de una identidad profesional en **Web3**.  
+Mi nombre es **[Christian Zamora]** y este es el inicio de mi portafolio sobre Ethereum en GitHub.  
+Actualmente me encuentro en proceso de formación como Dev dentro del ecosistema **Ethereum**, dando mis primeros pasos en la construcción de una identidad profesional en **Web3**.  
 
 ---
 
 ## 📖 Acerca de mí
-- 🎓 Estudiante en [nombre del curso, programa o institución].  
+- 🎓 Actualmente Frontend y QA , ademas de aprender las tecnologias para convertirme en [Desarrollador Ethereum].  
 - 💻 Enfocado/a en el aprendizaje y desarrollo de **contratos inteligentes** y **aplicaciones descentralizadas (dApps)**.  
-- 🔐 Interesado/a en las buenas prácticas de **seguridad en blockchain**, particularmente en el uso de herramientas como **Safe Multi-Signature Wallet**, ampliamente adoptadas en la industria.  
+- 🔐 Interesado/a en las buenas prácticas de **seguridad en blockchain**, ampliamente adoptadas en la industria.  
 - 🌍 Motivado/a por el crecimiento constante, la investigación y la contribución al ecosistema de Ethereum y Web3.  
 
 ---
@@ -28,10 +28,9 @@ Este repositorio corresponde a la entrega del **Trabajo Final del Módulo 1**, q
 
 ---
 
-## 🌐 Contacto
-- GitHub: [tu perfil de GitHub]  
-- LinkedIn: [tu perfil de LinkedIn]  
-- Correo electrónico: [tu email de contacto, opcional]  
+## 🌐 Contacto 
+- LinkedIn: [[tu perfil de LinkedIn](https://www.linkedin.com/in/christianzamorahermida/)]  
+ 
 
 ---
 ✦ *Este documento forma parte de mi primera etapa de aprendizaje y representa el inicio de mi participación activa en el ecosistema Web3.*  
