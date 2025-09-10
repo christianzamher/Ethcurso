@@ -29,7 +29,7 @@ Este repositorio corresponde a la entrega del **Trabajo Final del Módulo 1**, q
 ---
 
 ## 🌐 Contacto 
-- LinkedIn: [[tu perfil de LinkedIn](https://www.linkedin.com/in/christianzamorahermida/)]  
+- LinkedIn: [[Visitame en LinkedIn](https://www.linkedin.com/in/christianzamorahermida/)]  
  
 
 ---
