@@ -1,68 +1,50 @@
-# KipuBank - Smart Contract
+# KipuBank
 
-**Descripción**:
-Un contrato de bóveda personal que permite a los usuarios depositar y retirar ETH con límites de seguridad:
-- **Límite global de depósitos** (`bankCap`): Máximo total de ETH que el banco puede almacenar.
-- **Límite por retiro** (`withdrawalLimit`): Máximo que un usuario puede retirar en una transacción.
-- **Eventos**: Registra depósitos/retiros y actualiza contadores.
-- **Seguridad**: Usa `checks-effects-interactions`, errores personalizados y transferencias seguras.
+KipuBank es un contrato inteligente de bóveda segura en Ethereum que permite a los usuarios depositar y retirar ETH bajo reglas estrictas de seguridad y límites configurables.
 
----
+## Características
 
-## 🛠 Despliegue
+- Depósitos y retiros de ETH con límites por transacción y un tope global del banco.
+- Cálculo de intereses sobre depósitos.
+- Cooldown entre retiros para mayor seguridad.
+- Registro de estadísticas y transacciones por usuario.
+- Funciones administrativas para el owner.
+- Protección contra ataques de reentrancia.
+- Errores personalizados y eventos para trazabilidad.
 
-### Requisitos
-- [Remix IDE](https://remix.ethereum.org/) (o Hardhat/Foundry).
-- MetaMask con fondos en una **testnet** (ej: Sepolia).
-- Solidity ^0.8.20.
+## Despliegue
 
-### Pasos
-1. **Compilar**:
-   - Abre el archivo en Remix (`contracts/KipuBank.sol`).
-   - Selecciona el compilador **0.8.20** y compila.
+1. **Compila el contrato con Solidity 0.8.19.**
+2. **Despliega el contrato pasando el límite de retiro por transacción (en wei) como parámetro del constructor.**
+   - Ejemplo: Para un límite de 1 ETH, usa `1000000000000000000`.
+3. **El owner será la cuenta que despliega el contrato.**
 
-2. **Desplegar**:
-   - Ve a la pestaña **Deploy & Run**.
-   - Conecta MetaMask a la testnet (ej: Sepolia).
-   - Ingresa los parámetros del constructor:
-     - `_bankCap`: Ej: `100 ether` (límite global).
-     - `_withdrawalLimit`: Ej: `1 ether` (límite por retiro).
-   - Haz clic en **Deploy**.
+## Interacción
 
-3. **Verificar en Etherscan** (opcional):
-   - Copia la dirección del contrato desplegado.
-   - Ve a [Etherscan](https://sepolia.etherscan.io/) > **Verify Contract**.
-   - Pega el código y selecciona el compilador **0.8.20**.
+- **deposit()**: Deposita ETH en tu bóveda personal.
+- **withdraw(uint256 amount)**: Retira hasta el límite permitido y respetando el cooldown.
+- **withdrawAll()**: Retira todo tu saldo disponible.
+- **getUserVaultBalance(address user)**: Consulta el saldo de un usuario.
+- **getBankStats()**: Consulta estadísticas globales del banco.
+- **getUserStats(address user)**: Consulta estadísticas personales.
+- **getUserTransactions(address user)**: Consulta el historial de transacciones de un usuario.
+- **setBankCap(uint256 newCap)**: (Solo owner) Cambia el tope global del banco.
+- **setWithdrawalLimit(uint256 newLimit)**: (Solo owner) Cambia el límite de retiro por transacción.
+- **emergencyWithdraw(uint256 amount)**: (Solo owner) Retira fondos de emergencia.
 
----
+## Despliegue en testnet
 
-## 🤖 Interacción
+1. Selecciona una testnet en Remix (por ejemplo, Sepolia o Goerli).
+2. Conecta tu wallet (MetaMask).
+3. Despliega el contrato y guarda la dirección.
+4. Verifica el código en el block explorer correspondiente.
 
-### Funciones clave
-| Función          | Descripción                                  | Ejemplo (Remix)               |
-|------------------|----------------------------------------------|-------------------------------|
-| `deposit()`       | Deposita ETH en tu bóveda (envía valor).      | `deposit{value: 0.5 ether}()` |
-| `withdraw(uint)` | Retira ETH (hasta `withdrawalLimit`).        | `withdraw(0.3 ether)`         |
-| `getBalance()`    | Consulta tu saldo.                          | `getBalance("0xTuDireccion")` |
+## Dirección del contrato desplegado
 
-### Eventos
-- **Deposit**: Emite al depositar (user, amount, newBalance).
-- **Withdrawal**: Emite al retirar (user, amount, newBalance).
+> _Agrega aquí la dirección una vez desplegado y verificado._
 
 ---
 
-## 🔗 Contrato Desplegado
-- **Testnet**: [Sepolia](https://sepolia.etherscan.io/)
-- **Dirección**: [`0x4E4822ab6398474Ba0c844E6F6ecc43500C698db`]
+## Licencia
 
-
----
-
----
-
-## 🌐 Contacto 
-- LinkedIn: [[Visitame en LinkedIn](https://www.linkedin.com/in/christianzamorahermida/)]  
- 
-
----
-✦ *Este documento forma parte de mi primera etapa de aprendizaje y representa el inicio de mi participación activa en el ecosistema Web3.*  
+MIT
