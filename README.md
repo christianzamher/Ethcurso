@@ -41,7 +41,7 @@ KipuBank es un contrato inteligente de bóveda segura en Ethereum que permite a 
 
 ## Dirección del contrato desplegado
 
-> _Agrega aquí la dirección una vez desplegado y verificado._
+> 0x4E4822ab6398474Ba0c844E6F6ecc43500C698db
 
 ---
 
