@@ -1,30 +1,53 @@
-# 👋 Bienvenido/a
+# KipuBank
 
-Mi nombre es **[Christian Zamora]** y este es el inicio de mi portafolio sobre Ethereum en GitHub.  
-Actualmente me encuentro en proceso de formación como Dev dentro del ecosistema **Ethereum**, dando mis primeros pasos en la construcción de una identidad profesional en **Web3**.  
+KipuBank es un contrato inteligente de bóveda segura en Ethereum que permite a los usuarios depositar y retirar ETH bajo reglas estrictas de seguridad y límites configurables.
+
+## Características
+
+- Depósitos y retiros de ETH con límites por transacción y un tope global del banco.
+- Cálculo de intereses sobre depósitos.
+- Cooldown entre retiros para mayor seguridad.
+- Registro de estadísticas y transacciones por usuario.
+- Funciones administrativas para el owner.
+- Protección contra ataques de reentrancia.
+- Errores personalizados y eventos para trazabilidad.
+
+## Despliegue
+
+1. **Compila el contrato con Solidity 0.8.19.**
+2. **Despliega el contrato pasando el límite de retiro por transacción (en wei) como parámetro del constructor.**
+   - Ejemplo: Para un límite de 1 ETH, usa `1000000000000000000`.
+3. **El owner será la cuenta que despliega el contrato.**
+
+## Interacción
+
+- **deposit()**: Deposita ETH en tu bóveda personal.
+- **withdraw(uint256 amount)**: Retira hasta el límite permitido y respetando el cooldown.
+- **withdrawAll()**: Retira todo tu saldo disponible.
+- **getUserVaultBalance(address user)**: Consulta el saldo de un usuario.
+- **getBankStats()**: Consulta estadísticas globales del banco.
+- **getUserStats(address user)**: Consulta estadísticas personales.
+- **getUserTransactions(address user)**: Consulta el historial de transacciones de un usuario.
+- **setBankCap(uint256 newCap)**: (Solo owner) Cambia el tope global del banco.
+- **setWithdrawalLimit(uint256 newLimit)**: (Solo owner) Cambia el límite de retiro por transacción.
+- **emergencyWithdraw(uint256 amount)**: (Solo owner) Retira fondos de emergencia.
+
+## Despliegue en testnet
+
+1. Selecciona una testnet en Remix (por ejemplo, Sepolia o Goerli).
+2. Conecta tu wallet (MetaMask).
+3. Despliega el contrato y guarda la dirección.
+4. Verifica el código en el block explorer correspondiente.
+
+## Dirección del contrato desplegado
+
+> _Agrega aquí la dirección una vez desplegado y verificado._
 
 ---
 
-## 📖 Acerca de mí
-- 🎓 Actualmente Frontend y QA , ademas de aprender las tecnologias para convertirme en [Desarrollador Ethereum].  
-- 💻 Enfocado/a en el aprendizaje y desarrollo de **contratos inteligentes** y **aplicaciones descentralizadas (dApps)**.  
-- 🔐 Interesado/a en las buenas prácticas de **seguridad en blockchain**, ampliamente adoptadas en la industria.  
-- 🌍 Motivado/a por el crecimiento constante, la investigación y la contribución al ecosistema de Ethereum y Web3.  
+## Licencia
 
----
-
-## 🎯 Objetivos en Web3
-1. Adquirir un dominio sólido de **Solidity** y de las herramientas más utilizadas en el desarrollo sobre Ethereum.  
-2. Contribuir a proyectos de código abierto relacionados con **DeFi, DAOs y NFTs**.  
-3. Desarrollar soluciones seguras, escalables y orientadas a la comunidad.  
-4. Consolidar una trayectoria profesional como desarrollador/a en el ecosistema Web3.  
-
----
-
-## 📂 Este repositorio
-Este repositorio corresponde a la entrega del **Trabajo Final del Módulo 1**, que incluye:  
-- La creación de este perfil en GitHub con un archivo **README.md** personalizado.  
-- La configuración de una **Safe Multi-Signature Wallet**, como ejercicio práctico de gestión segura de activos digitales en Ethereum.  
+MIT
 
 ---
 
